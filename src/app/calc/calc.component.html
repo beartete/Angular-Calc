@@ -1,8 +1,28 @@
-<div>
+<div class="calculator">
   <form>
-    <input type="number" name="num1" [(ngModel)]="num1">
-    <input type="number" name="num2" [(ngModel)]="num2">
-    <button (click)="somar()">Somar</button>
-    <input [value]="soma">
+    <div class="input-group">
+      <h1>Calculadora Angular</h1>
+      <br>
+      <label for="num1">Número 1:</label>
+      <br>
+      <input type="number" name="num1" [(ngModel)]="num1">
+    </div>
+    <div class="input-group">
+      <label for="num2">Número 2:</label>
+      <br>
+      <input type="number" name="num2" [(ngModel)]="num2">
+    </div>
+    <div class="button-group">
+      <button (click)="somar()">Somar</button>
+      <button (click)="subtrair()">Subtrair</button>
+      <button (click)="multiplicar()">Multiplicar</button>
+      <button (click)="dividir()">Dividir</button>
+      <button (click)="zerar()">Limpar</button>
+    </div>
+    <div class="input-group">
+      <label for="resultado">Resultado:</label>
+      <br>
+      <input type="number" name="resultado" [value]="resultado" readonly>
+    </div>
   </form>
 </div>

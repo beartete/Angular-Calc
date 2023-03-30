@@ -6,10 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./calc.component.css']
 })
 export class CalcComponent {
-  //Atributos da classe/componente
   num1: number = 0;
   num2: number = 0;
   resultado: number = 0;
+
+  removeLeadingZero(input: HTMLInputElement) {
+    if (input.value === '0') {
+      input.value = '';
+    }
+  }
 
   somar() {
     this.resultado = this.num1 + this.num2;
@@ -37,3 +42,4 @@ export class CalcComponent {
     this.resultado = 0;
   }
 }
+
